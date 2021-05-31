@@ -40,7 +40,7 @@ const gameBoard = (() => {
 
     ///Reset Function 
     function reset() {
-        h2.textContent = "Player X Turn"
+        h2.textContent = "Player X Turn:"
         counter = 0;
         table = ['', '', '', '', '', '', '', '', '']
         board.style.pointerEvents = null;
@@ -96,7 +96,7 @@ const displayController = (() => {
     let counter = 0;
 
 
-    ///Function that plays the game takes the an arr
+    ///Function that plays the game takes the an array
     function play(arr) {
 
         ///looping the arr so I display the divs
@@ -109,7 +109,7 @@ const displayController = (() => {
                 /// adds to the counter
                 counter++
 
-                ///Game logic Player X always start the game it creates a div and adds a class
+                ///Game logic Player X always start the game it creates a div and add a class
                 if (counter % 2 === 1) {
                     const xS = document.createElement('div');
                     xS.textContent = "X";
@@ -120,9 +120,9 @@ const displayController = (() => {
                     e.target.style.pointerEvents = 'none';
 
                     gameBoard.tableMarker('x', index)
-                    h2.textContent = 'Player O Turn'
+                    h2.textContent = 'Player O Turn:'
 
-                    ///The Game if my marker matches one of the winning Conditions.Then the game is stoped and the winner is declared.
+                    ///The Game if  marker matches one of the winning Conditions.Then the game is stoped and the winner is declared.
                     if (gameBoard.winTest(board, 'x') === true) {
                         counter = 0;
                         gameBoard.boardStyle();
@@ -136,7 +136,7 @@ const displayController = (() => {
                     div.append(oS);
                     e.target.style.pointerEvents = 'none';
                     gameBoard.tableMarker('o', index);
-                    h2.textContent = 'Player X Turn';
+                    h2.textContent = 'Player X Turn:';
                     if (gameBoard.winTest(board, 'o') === true) {
                         h2.textContent = "Player O Won";
                         counter = 0;
