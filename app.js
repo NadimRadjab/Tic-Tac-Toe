@@ -120,7 +120,7 @@ const displayController = (() => {
                     e.target.style.pointerEvents = 'none';
 
                     gameBoard.tableMarker('x', index)
-                    h2.textContent = 'Player O Turn:'
+                    h2.textContent = `Player O's Turn:`
 
                     ///The Game if  marker matches one of the winning Conditions.Then the game is stoped and the winner is declared.
                     if (gameBoard.winTest(board, 'x') === true) {
@@ -136,7 +136,7 @@ const displayController = (() => {
                     div.append(oS);
                     e.target.style.pointerEvents = 'none';
                     gameBoard.tableMarker('o', index);
-                    h2.textContent = 'Player X Turn:';
+                    h2.textContent = `Player X's Turn: `;
                     if (gameBoard.winTest(board, 'o') === true) {
                         h2.textContent = "Player O Wins";
                         counter = 0;
