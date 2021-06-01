@@ -42,7 +42,7 @@ border: solid 6px #006d77;
 #title{
     align-items: center;
     display: flex;
-    max-width: 1800px;
+    max-width: 2000px;
     justify-content: center;
     height: 180px;
    border-bottom: 5px solid black;
@@ -59,7 +59,7 @@ h1{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 680px;
+    height: 770px;
 }
 .button {
     margin: 15px;
